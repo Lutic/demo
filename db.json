@@ -11,5 +11,5 @@
   "cacheLocation": "localStorage",
   "navigateToLoginRequestUrl": false,
   "level": 3,
-  "piiLoggingEnabled": true,
+  "piiLoggingEnabled": true
 }
