@@ -1,20 +1,24 @@
 {
-  clientID: '7631f945-da36-406c-9adc-d3ba50d3e747', // appID
-  authority: 'https://login.microsoftonline.com/48a83fca-b65d-4e51-8b34-ff0eb66fb4d0', // tenantID
+  "clientID": "7631f945-da36-406c-9adc-d3ba50d3e747", // appID
+  "authority": "https://login.microsoftonline.com/48a83fca-b65d-4e51-8b34-ff0eb66fb4d0", // tenantID
 
   // "scp":
   // "Calendars.ReadWrite Contacts.ReadWrite Files.ReadWrite.All Mail.ReadWrite Notes.ReadWrite.All
   // Sites.ReadWrite.All Tasks.ReadWrite User.ReadWrite
   // openid People.Read profile
   // User.ReadBasic.All email",
-  consentScopes: ['profile', 'email', 'User.Read', 'User.ReadBasic.All'],
-  redirectUri: 'http://localhost:4200/', // !
-  postLogoutRedirectUri: 'http://localhost:4200/login',
-  protectedResourceMap,
-  popUp: false,
-  cacheLocation: 'localStorage',
-  navigateToLoginRequestUrl: false,
-  logger: loggerCallback,
-  level: LogLevel.Verbose,
-  piiLoggingEnabled: true,
+  "consentScopes": ["profile", "email", "User.Read", "User.ReadBasic.All"],
+  "redirectUri": "http://localhost:4200/", // !
+  "postLogoutRedirectUri": "http://localhost:4200/login",
+  "protectedResourceMap": [
+  ["https://graph.microsoft.com/beta/me", ["User.Read", "User.ReadBasic.All"]],
+  // [environment.api_url, ['profile']],
+  // ['https://graph.microsoft.com/beta/me/photo/$value', ['User.Read']],
+],
+  "popUp": false,
+  "cacheLocation": "localStorage",
+  "navigateToLoginRequestUrl": false,
+  "logger": loggerCallback,
+  "level": LogLevel.Verbose,
+  "piiLoggingEnabled": true,
 }
